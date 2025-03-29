@@ -1,0 +1,174 @@
+.left {
+    display: inline-block;
+    /* border: 2px solid red; */
+    position: absolute;
+    left: 45px;
+    top: 15px;
+}
+
+.left img {
+    width: 190px;
+    margin: -35px;
+}
+
+.left div {
+    text-align: center;
+    line-height: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+
+}
+
+.mid {
+    display: block;
+    width: 40%;
+    margin: 20px auto;
+    /* border: 2px solid rgb(0, 0, 250); */
+}
+
+.right {
+    position: absolute;
+    right: 34px;
+    top: 35px;
+    display: inline-block;
+    /* border: 2px solid rgb(20, 236, 8); */
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.navbar li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 34px 13px;
+}
+
+.navbar li a.active {
+    text-decoration: underline;
+    color: rgb(183, 180, 180);
+}
+
+.navbar li a:hover {
+    color: red;
+}
+
+.btn {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0px 10px;
+    padding: 5px 13px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: 3px solid #8b9a8f;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: red;
+}
+
+.container {
+    border: 2px solid white;
+    margin: 150px 275px;
+    padding: 50px;
+    width: 65%;
+    border-radius: 40px;
+}
+
+.container h1 {
+    font-size: 50px;
+    width: 18%;
+    display: block;
+    color: rgb(219 255 0);
+    padding: 0px;
+    margin: 0px auto;
+}
+
+.container p{
+    font-size: 25px;
+    font-style: bold;
+    width: 100%;
+    display: block;
+    color: rgb(255 255 255);
+    padding: 0px;
+    margin: 0px auto;
+}
+
+.container button {
+    display: block;
+    width: 25%;
+    margin: 5px 200px;
+}
+
+.container button:hover {
+    text-decoration: underline;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.form-group input {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    width: 500px;
+    height: 5px;
+    margin: 15px;
+    padding: 17px;
+    font-size: 25px;
+    border-radius: 30px;
+}
+
+select {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    width: 540px;
+    height: 45px;
+    margin: 15px;
+    /* padding: 0px; */
+    font-size: 25px;
+    /* color: #6d6c6c; */
+    border-radius: 30px;
+}
+
+option {
+    text-align: center;
+}
+
+/*.container {
+    border: 2px solid white;
+    margin: 150px 425px;
+    padding: 75px;
+    width: 50%;
+    border-radius: 40px;
+}
+
+.container h1 {
+    font-size: 50px;
+    width: 25%;
+    display: block;
+    color: rgb(219 255 0);
+    padding: 0px;
+    margin: 0px auto;
+}
+
+.container p{
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    color: rgb(0 255 221);
+    padding: 0px;
+    margin: 0px auto;
+} */

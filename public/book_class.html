@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Classes - WeFIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/gym3.png" alt="Logo">
+            <div>WeFIT</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/calc">Fitness Calculator</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <button class="btn" onclick="contactUs()">Call Us</button>
+            <button class="btn" onclick="contactUs()">Email Us</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Book Your Classes</h1>
+        <div class="class-grid">
+            <div class="class-card">
+                <h2>Power Yoga</h2>
+                <p>Monday, Wednesday, Friday</p>
+                <p>Time: 6:00 AM - 7:00 AM</p>
+                <p>Instructor: Priya Sharma</p>
+                <p class="price">₹500 per class</p>
+                <button class="btn" onclick="bookClass('Power Yoga')">Book Now</button>
+            </div>
+            <div class="class-card">
+                <h2>Zumba</h2>
+                <p>Tuesday, Thursday, Saturday</p>
+                <p>Time: 7:00 PM - 8:00 PM</p>
+                <p>Instructor: Rahul Verma</p>
+                <p class="price">₹400 per class</p>
+                <button class="btn" onclick="bookClass('Zumba')">Book Now</button>
+            </div>
+            <div class="class-card">
+                <h2>CrossFit</h2>
+                <p>Monday, Wednesday, Friday</p>
+                <p>Time: 5:00 PM - 6:00 PM</p>
+                <p>Instructor: Amit Singh</p>
+                <p class="price">₹600 per class</p>
+                <button class="btn" onclick="bookClass('CrossFit')">Book Now</button>
+            </div>
+            <div class="class-card">
+                <h2>Bollywood Dance</h2>
+                <p>Tuesday, Thursday, Saturday</p>
+                <p>Time: 6:00 PM - 7:00 PM</p>
+                <p>Instructor: Neha Patel</p>
+                <p class="price">₹450 per class</p>
+                <button class="btn" onclick="bookClass('Bollywood Dance')">Book Now</button>
+            </div>
+            <div class="class-card">
+                <h2>Kickboxing</h2>
+                <p>Monday, Wednesday, Friday</p>
+                <p>Time: 8:00 AM - 9:00 AM</p>
+                <p>Instructor: Rajesh Kumar</p>
+                <p class="price">₹550 per class</p>
+                <button class="btn" onclick="bookClass('Kickboxing')">Book Now</button>
+            </div>
+            <div class="class-card">
+                <h2>Spinning</h2>
+                <p>Tuesday, Thursday, Saturday</p>
+                <p>Time: 8:00 PM - 9:00 PM</p>
+                <p>Instructor: Deepika Reddy</p>
+                <p class="price">₹500 per class</p>
+                <button class="btn" onclick="bookClass('Spinning')">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function contactUs() {
+            window.location.href = 'contact.html';
+        }
+
+        function bookClass(className) {
+            alert(`Booking confirmed for ${className} class! Please pay at the counter.`);
+        }
+    </script>
+</body>
+</html>

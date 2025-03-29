@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/gym3.png" alt="Logo">
+            <div>WeFIT</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/calc">Fitness Calculator</a></li>
+                <li><a href="/about" class="active">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <button class="btn" onclick="contactUs()">Call Us</button>
+            <button class="btn" onclick="contactUs()">Email Us</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <p>We are a group of fitness enthusiasts who want to help you achieve your fitness goals. We provide a range of services to help you get in shape and stay healthy. Our trainers are experienced and certified, and they will work with you to create a personalized fitness plan that fits your needs. Whether you are looking to lose weight, build muscle, or improve your overall health, we can help you reach your goals. Contact us today to get started on your fitness journey!</p>
+        <br>
+        <p>At WeFIT, we believe that fitness is not just about working out, but also about maintaining a balanced lifestyle. Our state-of-the-art facilities are equipped with the latest fitness equipment, and we offer a variety of classes, including yoga, pilates, and high-intensity interval training (HIIT). Our nutrition experts are also available to provide guidance on healthy eating habits and meal planning.</p>
+        <br>
+        <p>We understand that everyone's fitness journey is unique, which is why we offer flexible membership options to suit your schedule and budget. Our community is supportive and inclusive, and we strive to create a welcoming environment for all our members. Join us at WeFIT and become a part of our fitness family. Together, we can achieve your fitness goals and lead a healthier, happier life.</p>
+    </div>
+
+    <script>
+        function contactUs() {
+            window.location.href = 'contact.html';
+        }
+    </script>
+</body>
+</html>

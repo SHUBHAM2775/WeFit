@@ -1,0 +1,228 @@
+/* General styling for body */
+body {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background: url('img/gym-background.jpg') center center / cover no-repeat;
+}
+
+/* Header styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    z-index: 1000;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out;
+}
+
+/* Logo and brand styling */
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.left div {
+    font-size: 28px;
+}
+
+/* Navbar links styling */
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar li a.active,
+.navbar li a:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Styling for buttons in the right section */
+.right {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.right .btn {
+    font-family: inherit;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.right .btn:hover {
+    background: white;
+    color: red;
+}
+
+/* Dashboard container and links */
+.dashboard-content,
+.container {
+    max-width: 500px;
+    margin: 175px auto;
+    padding: 85px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container h1,
+.dashboard-content h1 {
+    font-size: 36px;
+    color: #4fffc9;
+    margin-bottom: 20px;
+}
+
+/* Dashboard links and buttons */
+.dashboard-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard-links a {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 15px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.dashboard-links a:hover {
+    background-color: white;
+    color: red;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: 2px solid red;
+}
+
+/* Service section styling */
+.service {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.service h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff4747;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Styling for the submit button */
+.container button[type="submit"] {
+    font-family: inherit;
+    font-weight: bold;
+    padding: 12px 25px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.container button[type="submit"]:hover {
+    background: white;
+    color: red;
+    transform: translateY(-2px);
+}
+
+.container button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px red;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 14px;
+    position: relative; /* Changes from absolute to relative */
+    bottom: 0;
+    margin-top: 40px; /* Adds space between content and footer */
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to WeFIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/gym3.png" alt="Logo">
+            <div>WeFIT</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/calc">Fitness Calculator</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <button class="btn" onclick="contactUs()">Call Us</button>
+            <button class="btn" onclick="contactUs()">Email Us</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Welcome, <span id="userName"></span>!</h1>
+        <p>Thank you for joining WeFIT. We're excited to help you reach your fitness goals.</p>
+        <div class="dashboard-links">
+            <a href="/workout" class="btn">Your Workout Plan</a>
+            <a href="/diet" class="btn">Your Diet Plan</a>
+            <a href="/progress" class="btn">Track Your Progress</a>
+            <a href="/book_class" class="btn">Book Gym Classes</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 WeFIT Gym. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get the name from the query parameter in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name'); // 'name' is the query parameter
+
+        // Display the name in the welcome message
+        document.getElementById('userName').textContent = name;
+
+        function contactUs() {
+            window.location.href = 'contact.html';
+        }
+    </script>
+</body>
+
+</html>

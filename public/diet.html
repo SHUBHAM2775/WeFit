@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan - WeFIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/gym3.png" alt="Logo">
+            <div>WeFIT</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/calc">Fitness Calculator</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <button class="btn" onclick="contactUs()">Call Us</button>
+            <button class="btn" onclick="contactUs()">Email Us</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Your Personalized Diet Plan</h1>
+        <div class="diet-plan">
+            <div class="meal-section">
+                <h2>Breakfast</h2>
+                <ul>
+                    <li>Oatmeal with fruits and nuts</li>
+                    <li>Greek yogurt with honey</li>
+                    <li>Whole grain toast with eggs</li>
+                    <li>Green tea or black coffee</li>
+                </ul>
+            </div>
+            <div class="meal-section">
+                <h2>Lunch</h2>
+                <ul>
+                    <li>Grilled chicken salad</li>
+                    <li>Brown rice with vegetables</li>
+                    <li>Quinoa bowl with chickpeas</li>
+                    <li>Mixed fruit for dessert</li>
+                </ul>
+            </div>
+            <div class="meal-section">
+                <h2>Dinner</h2>
+                <ul>
+                    <li>Baked salmon with vegetables</li>
+                    <li>Sweet potato with lean meat</li>
+                    <li>Stir-fried tofu with rice</li>
+                    <li>Fresh fruit salad</li>
+                </ul>
+            </div>
+            <div class="meal-section">
+                <h2>Snacks</h2>
+                <ul>
+                    <li>Mixed nuts and seeds</li>
+                    <li>Fresh fruits</li>
+                    <li>Protein smoothie</li>
+                    <li>Greek yogurt with berries</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function contactUs() {
+            window.location.href = 'contact.html';
+        }
+    </script>
+</body>
+</html>

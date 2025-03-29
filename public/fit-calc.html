@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/gym3.png" alt="Logo">
+            <div>WeFIT</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/calc" class="active">Fitness Calculator</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <button class="btn" onclick="contactUs()">Call Us</button>
+            <button class="btn" onclick="contactUs()">Email Us</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Fitness Calculator</h1>
+        <form action="/calc" method="post">
+            <div class="form-group">
+                <input type="number" name="weight" placeholder="Enter Your Weight (kg)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" name="height" placeholder="Enter Your Height (cm)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" name="age" placeholder="Enter Your Age" required>
+            </div>
+            <div class="form-group">
+                <select name="gender" required>
+                    <option value="select" selected>Select Your Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="activity" required>
+                    <option value="select" selected>Select Activity Level</option>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="light">Light Exercise</option>
+                    <option value="moderate">Moderate Exercise</option>
+                    <option value="active">Very Active</option>
+                    <option value="extra">Extra Active</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Calculate</button>
+        </form>
+    </div>
+
+    <script>
+        function contactUs() {
+            window.location.href = 'contact.html';
+        }
+    </script>
+</body>
+</html>
