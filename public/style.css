@@ -8,19 +8,19 @@ body {
 }
 
 .header {
-    position: fixed; /* Keeps the navbar fixed at the top of the viewport */
-    top: 0; /* Default position when visible */
+    position: fixed; 
+    top: 0; 
     left: 0;
-    width: 95%; /* Full width of the viewport */
-    z-index: 1000; /* Ensures the navbar stays on top of other elements */
-    background-color: black; /* Black background to match the design */
-    color: white; /* Text color for visibility */
+    width: 95%; 
+    z-index: 1000; 
+    background-color: black; 
+    color: white; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 40px; /* Adds spacing around navbar content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    transition: top 0.3s ease-in-out; /* Smooth animation for hiding/showing */
+    padding: 8px 40px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: top 0.3s ease-in-out; 
 }
 
 .left {
