@@ -1,4 +1,3 @@
-/* General styling for body */
 body {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
@@ -8,24 +7,22 @@ body {
     background: url('img/gym-background.jpg') center center / cover no-repeat;
 }
 
-/* Header styling */
 .header {
-    position: fixed;
-    top: 0;
+    position: fixed; /* Keeps the navbar fixed at the top of the viewport */
+    top: 0; /* Default position when visible */
     left: 0;
-    width: 95%;
-    z-index: 1000;
-    background-color: black;
-    color: white;
+    width: 95%; /* Full width of the viewport */
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+    background-color: black; /* Black background to match the design */
+    color: white; /* Text color for visibility */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: top 0.3s ease-in-out;
+    padding: 8px 40px; /* Adds spacing around navbar content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    transition: top 0.3s ease-in-out; /* Smooth animation for hiding/showing */
 }
 
-/* Logo and brand styling */
 .left {
     display: flex;
     align-items: center;
@@ -40,7 +37,6 @@ body {
     font-size: 28px;
 }
 
-/* Navbar links styling */
 .navbar {
     display: flex;
     gap: 20px;
@@ -64,11 +60,10 @@ body {
     color: white;
 }
 
-/* Styling for buttons in the right section */
 .right {
     display: flex;
-    gap: 50px;
-    align-items: center;
+    gap: 50px; /* Adds spacing between buttons */
+    align-items: center; /* Ensures buttons align vertically */
 }
 
 .right .btn {
@@ -81,7 +76,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
 }
 
 .right .btn:hover {
@@ -89,85 +84,101 @@ body {
     color: red;
 }
 
-/* Dashboard container and links */
-.dashboard-content,
 .container {
-    max-width: 500px;
-    margin: 175px auto;
-    padding: 85px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
+    max-width: 1200px; /* Increased from 900px */
+    margin: 150px auto 100px;
+    padding: 60px;
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+    border-radius: 25px;
     text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.container h1,
-.dashboard-content h1 {
+.container h1 {
     font-size: 36px;
     color: #4fffc9;
     margin-bottom: 20px;
 }
 
-/* Dashboard links and buttons */
-.dashboard-links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.dashboard-links a {
-    text-decoration: none;
-    background-color: red;
-    color: white;
-    padding: 15px 10px;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width: 100%;
-    text-align: center;
-}
-
-.dashboard-links a:hover {
-    background-color: white;
-    color: red;
-}
-
-/* Form styling */
 .form-group {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .form-group input,
-.form-group select {
-    width: 100%;
-    padding: 15px;
+.form-group select,
+.form-group textarea {
+    width: 90%;
+    padding: 12px 15px;
     font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-top: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+    max-height: 200px;
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .form-group input:focus,
-.form-group select:focus {
-    outline: 2px solid red;
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4fffc9;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(79, 255, 201, 0.2);
 }
 
-/* Service section styling */
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 40px;
+}
+
+.form-group select option {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
 .service {
     text-align: center;
     padding: 50px 10%;
     background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 60px;
+    border-radius: 15px;
 }
 
 .service h1 {
     font-size: 36px;
     margin-bottom: 30px;
     color: #ff4747;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .service-item {
@@ -178,51 +189,274 @@ body {
     color: white;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-item:hover {
     background-color: red;
     color: white;
+    transform: translateY(-5px);
 }
 
 /* Styling for the submit button */
 .container button[type="submit"] {
     font-family: inherit;
     font-weight: bold;
-    padding: 12px 25px;
+    padding: 12px 25px; /* Increase padding for better appearance */
     background: red;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
-    text-transform: uppercase;
-    font-size: 16px;
-    margin-top: 20px;
+    width: 100%; /* Makes the button span the full width of the container */
+    text-transform: uppercase; /* Adds emphasis to the text */
+    font-size: 16px; /* Slightly smaller font for better readability */
+    margin-top: 20px; /* Adds space above the button */
 }
 
+/* Hover effect for the button */
 .container button[type="submit"]:hover {
     background: white;
     color: red;
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Adds subtle hover effect */
 }
 
+/* Focus effect for the button */
 .container button[type="submit"]:focus {
     outline: none;
-    box-shadow: 0 0 5px red;
+    box-shadow: 0 0 5px red; /* Adds red outline when focused */
 }
 
-/* Footer styling */
+/* Workout and Diet Plan Styling */
+.workout-plan,
+.diet-plan {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.workout-section,
+.meal-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.workout-section:hover,
+.meal-section:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.workout-section h2,
+.meal-section h2 {
+    color: #4fffc9;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.workout-section ul,
+.meal-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.workout-section li,
+.meal-section li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+}
+
+.workout-section li:last-child,
+.meal-section li:last-child {
+    border-bottom: none;
+}
+
+/* Dashboard Links Styling */
+.dashboard-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.dashboard-links a {
+    text-decoration: none;
+    background: linear-gradient(145deg, #ff4747, #ff3333);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+}
+
+/* Footer Styling */
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     width: 100%;
     font-size: 14px;
-    position: relative; /* Changes from absolute to relative */
+    position: fixed;
     bottom: 0;
-    margin-top: 40px; /* Adds space between content and footer */
+    left: 0;
 }
 
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .container {
+        margin: 120px 40px;
+        padding: 40px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 100px 20px;
+        padding: 30px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-links {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item,
+    .dashboard-links a {
+        min-height: 60px;
+        padding: 20px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item,
+    .dashboard-links a {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+/* Class Booking Styling */
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.class-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.class-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.class-card h2 {
+    color: #4fffc9;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.class-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: white;
+    line-height: 1.6;
+}
+
+.class-card .price {
+    color: #ffd700;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+    padding: 8px 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.class-card .btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.class-card .btn:hover {
+    background-color: #ff3333;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.3);
+}
+
+/* Responsive adjustments for class booking */
+@media (max-width: 768px) {
+    .class-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .class-card {
+        padding: 20px;
+    }
+
+    .class-card h2 {
+        font-size: 20px;
+    }
+
+    .class-card p {
+        font-size: 14px;
+    }
+
+    .class-card .price {
+        font-size: 16px;
+    }
+}

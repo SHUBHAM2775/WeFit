@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Progress - WeFIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="track.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/gym3.png" alt="Logo">
+            <div>WeFIT</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/calc">Fitness Calculator</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <button class="btn" onclick="contactUs()">Call Us</button>
+            <button class="btn" onclick="contactUs()">Email Us</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Track Your Progress</h1>
+        
+        <div class="progress-grid">
+            <div class="progress-card">
+                <h2>Weight Progress</h2>
+                <div class="chart-container">
+                    <canvas id="weightChart"></canvas>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span>Starting:</span>
+                        <span>75 kg</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Current:</span>
+                        <span>72 kg</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Goal:</span>
+                        <span>70 kg</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-card">
+                <h2>Workout Streak</h2>
+                <div class="streak-container">
+                    <div class="streak-number">7</div>
+                    <div class="streak-text">Days</div>
+                </div>
+                <div class="calendar-grid">
+                    <!-- Calendar days will be added via JavaScript -->
+                </div>
+            </div>
+
+            <div class="progress-card">
+                <h2>Body Measurements</h2>
+                <form class="measurement-form">
+                    <div class="form-group">
+                        <input type="number" name="chest" placeholder="Chest (cm)">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="waist" placeholder="Waist (cm)">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="arms" placeholder="Arms (cm)">
+                    </div>
+                    <button type="submit" class="btn">Update Measurements</button>
+                </form>
+            </div>
+
+            <div class="progress-card">
+                <h2>Personal Records</h2>
+                <div class="records-list">
+                    <div class="record-item">
+                        <span>Bench Press</span>
+                        <span>80 kg</span>
+                    </div>
+                    <div class="record-item">
+                        <span>Squat</span>
+                        <span>100 kg</span>
+                    </div>
+                    <div class="record-item">
+                        <span>Deadlift</span>
+                        <span>120 kg</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function contactUs() {
+            window.location.href = 'contact.html';
+        }
+
+        // Initialize weight progress chart
+        const ctx = document.getElementById('weightChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: 'Weight (kg)',
+                    data: [75, 74, 73, 72],
+                    borderColor: '#4fffc9',
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+
+        // Generate calendar grid
+        const calendarGrid = document.querySelector('.calendar-grid');
+        const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+        days.forEach(day => {
+            const dayElement = document.createElement('div');
+            dayElement.className = 'calendar-day';
+            dayElement.textContent = day;
+            calendarGrid.appendChild(dayElement);
+        });
+    </script>
+</body>
+</html>

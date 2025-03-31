@@ -1,0 +1,161 @@
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.progress-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.progress-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.progress-card h2 {
+    color: #4fffc9;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.chart-container {
+    margin: 20px 0;
+    height: 200px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-item span:first-child {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.stat-item span:last-child {
+    color: #4fffc9;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.streak-container {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(79, 255, 201, 0.1);
+    border-radius: 10px;
+}
+
+.streak-number {
+    font-size: 48px;
+    color: #4fffc9;
+    font-weight: bold;
+}
+
+.streak-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.calendar-day {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.measurement-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.measurement-form .form-group {
+    margin-bottom: 0;
+}
+
+.measurement-form input {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.records-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.record-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.record-item span:first-child {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.record-item span:last-child {
+    color: #4fffc9;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .progress-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .progress-card {
+        padding: 20px;
+    }
+
+    .progress-card h2 {
+        font-size: 20px;
+    }
+
+    .streak-number {
+        font-size: 36px;
+    }
+
+    .calendar-day {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .record-item {
+        font-size: 14px;
+    }
+}
